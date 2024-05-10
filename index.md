@@ -1,0 +1,139 @@
+---
+layout: home
+description: "Department of Statistics Visva-Bharati. Meet faculties, students and alumnis. Explore our department, lecture notes, previous year question, and other resources."
+---
+
+<section id="home-hero">
+  <div class="container">
+    <div class="row  flex-lg-row-reverse">
+      <div class="col-lg-6 mt-5 mt-lg-0">
+        <div id="carouselExampleRide" class="carousel slide" data-bs-ride="true">
+          <div class="carousel-inner">
+            {% for item in site.data.home.carousel %}
+              <div class="carousel-item{% if forloop.first %} active{% endif %}">
+                <img src="{{ item.image }}" class="d-block w-100" alt="{{ item.alt }}">
+              </div>
+            {% endfor %}
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleRide" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleRide" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="col-lg-6">
+        <figure class="text-center">
+          <blockquote class="blockquote pt-5 h2">
+            <p>{{ site.data.home.intro.quote }}</p>
+          </blockquote>
+          <figcaption class="blockquote-footer">
+            {{ site.data.home.intro.author }}
+            <cite title="Source Title">{{ site.data.home.intro.source }}</cite>
+          </figcaption>
+        </figure>
+      </div>
+    </div><!-- Content row end -->
+  </div><!-- Container end -->
+</section>
+
+
+
+
+<section>
+  <div class="row">
+    <div class="col-lg-6">
+      <div class="ts-intro">
+          <h1 class="into-sub-title h3">{{ site.data.home.department_intro.title }}</h1>
+          <p>{{ site.data.home.department_intro.content | newline_to_br }}</p>
+      </div><!-- Intro box end -->
+  
+    </div><!-- Col end -->
+  
+    <div class="col-lg-6 mt-4 mt-lg-0">
+       
+      <div class="accordion" id="accordionExample">
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+              Who are we ?
+            </button>
+          </h2>
+          <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              Students of Statistics department Visva-Bhartai.
+            </div>
+          </div>
+        </div>
+        
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+              Why this page ?
+            </button>
+          </h2>
+          <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              
+              Sharing Notes & Handouts
+              
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+              How to contribute ?
+            </button>
+          </h2>
+          <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              <strong><i class="fab fa-github"></i></strong> This website hosted in github pages  so to contibute you have to  <code><a href="https://github.com/mrinalcs/vbstat/fork">fork reposetory</a></code> and make  pull request. For details see repo description
+            </div>
+          </div>
+        </div>
+      </div>
+    </div><!-- Col end -->
+  </div>
+  
+</section>
+
+
+<section>
+  <div class="border-top">
+    
+    <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
+      <div class="col d-flex align-items-start">
+        <a href="/question-papers" > <div>
+          <h3 class="h2 text-body-emphasis">QUESTION PAPERS</h3>
+          <p>Collection of past examination papers organized by year and semester.</p>
+          
+             
+          
+        </div></a>
+      </div>
+      <div class="col d-flex align-items-start">
+        <a href="/notes" > <div>
+          <h3 class="h2 text-body-emphasis">BSC NOTES</h3>
+          <p>List of Notes papers wise listed</p>
+          
+            
+          
+        </div></a>
+      </div>
+      <div class="col d-flex align-items-start">
+        <a href="/msc" > <div>
+          <h3 class="h2 text-body-emphasis">MSC NOTES & QUESTIONS</h3>
+          <p>MSc notes handouts and pdfs</p>
+          
+             
+          
+        </div></a>
+      </div>
+    </div>
+  </div>
+</section>
