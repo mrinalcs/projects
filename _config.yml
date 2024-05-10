@@ -1,0 +1,63 @@
+url: "https://vbstat.github.io"
+title: "Department of Statistics, Visva-Bharti"
+author:
+  name: Mrinal Chandra Sarkar
+  github: mrinalcs
+  email: hi@mrinal.tk
+  repo: vbstat
+
+ 
+
+Logo:
+  path: /assets/images/logo.png
+  alt: Visva-Bharati Logo
+  title: Department of Statistics
+
+
+webmaster_verifications:
+  google: MqwDRSLNo0fmAemi7VVB_g6f7Z9KU9u_EhcaU9icYbQ
+
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+  - jekyll-remote-theme
+  
+remote_theme: vbstat/vbstat.github.io
+
+feed:
+  path: feed.xml
+  collections: ['pages', 'faculty', 'students']
+
+permalink: /:title
+
+collections:
+  pages:
+    output: true
+  faculty:
+    output: true
+    permalink: /:title
+  students:
+    output: true
+    permalink: /:title
+
+
+defaults:
+  - scope:
+      path: ""
+      type: "faculty"
+    values:
+      layout: "faculty"
+
+  - scope:
+      path: ""
+      type: "students"
+    values:
+      layout: "student" 
+
+sass:
+  sass_dir: _sass
+  style: :compressed # Set to :expanded for development, :compressed for production
+
+exclude:
+  - README.md
